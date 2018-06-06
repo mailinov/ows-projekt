@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>automobili</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="projekt.css">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mojIzbornik">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="mojIzbornik">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="automobili.html">Automobili</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+	<!-- <div id="left">Ovdje treba biti padajući izbornik sa slikom auta</div>
+	<div id="main">Ovdje bi trebalo biti login</div>
+	<div id="right">Ovdje bi trebao biti kalendar</div> -->
+
+	<div class="container">
+		
+		<div class="col-md-3 bordered">
+			
+			<ul class="home-lista-auta">
+				<li><a href="#" data-auto="Renault">Renault</a></li>
+				<li><a href="#" data-auto="BMW">BMW</a></li>
+				<li><a href="#" data-auto="Dacia">Dacia</a></li>
+				<li><a href="#" data-auto="Mercedes">Mercedes</a></li>
+				<li><a href="#" data-auto="Smart">Smart</a></li>
+			</ul>
+
+		</div>
+		<div class="col-md-9 bordered slike-auta">
+			<img src="img/renault.jpg" style="width: 100%;" data-auto="Renault">
+			<img src="img/bmw.jpg" style="width: 100%; display: none;" data-auto="BMW">
+			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Dacia">
+			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Mercedes">
+			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Smart">
+		</div>
+		
+
+	</div>
+				
+			
+
+
+
+	<footer class="container-fluid text-center foot"><p>Mario Ilinović</p></footer>
+
+	<script type="text/javascript">
+		
+		$('.home-lista-auta a').on('click', function (e) {
+
+			e.preventDefault();
+			var auto = $(this).data('auto');
+			$('.slike-auta img').hide();
+			$('.slike-auta img[data-auto="' + auto + '"]').show();
+
+		});	
+
+	</script>
+</body>
+</html>
