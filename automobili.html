@@ -61,7 +61,7 @@
 		</div>
 		<div class="col-md-2 karakteristike">
 			<p data-auto="Renault">Godina 2012<br> motor: disel</p>
-			<p style="display: none;" data-auto="bmw">Godina 2015<br> motor: benzin</p>
+			<p style="display: none;" data-auto="BMW">Godina 2015<br> motor: benzin</p>
 		</div>
 
 	</div>
@@ -85,8 +85,8 @@
 
 			e.preventDefault();
 			var auto = $(this).data('auto');
-			$('.karakteristike').hide();
-			$('.karakteristike[data-auto="' + auto + '"]').show();
+			$('.karakteristike p').hide();
+			$('.karakteristike p[data-auto="' + auto + '"]').show();
 		});	
 	</script>
 </body>
