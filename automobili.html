@@ -52,20 +52,19 @@
 			</ul>
 
 		</div>
-		<div class="col-md-9 slike-auta">
+		<div class="col-md-7 slike-auta">
 			<img src="img/renault.jpg" style="width: 100%;" data-auto="Renault">
 			<img src="img/bmw.jpg" style="width: 100%; display: none;" data-auto="BMW">
 			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Dacia">
 			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Mercedes">
 			<img src="img/renault.jpg" style="width: 100%; display: none;" data-auto="Smart">
 		</div>
-		
+		<div class="col-md-2 karakteristike">
+			<p data-auto="Renault">Godina 2012<br> motor: disel</p>
+			<p style="display: none;" data-auto="bmw">Godina 2015<br> motor: benzin</p>
+		</div>
 
 	</div>
-				
-			
-
-
 
 	<footer class="container-fluid text-center foot"><p>Mario Ilinović</p></footer>
 
@@ -77,9 +76,18 @@
 			var auto = $(this).data('auto');
 			$('.slike-auta img').hide();
 			$('.slike-auta img[data-auto="' + auto + '"]').show();
-
 		});	
+	</script>
 
+	<script type="text/javascript">
+		
+		$('.home-lista-auta a').on('click', function (e) {
+
+			e.preventDefault();
+			var auto = $(this).data('auto');
+			$('.karakteristike').hide();
+			$('.karakteristike[data-auto="' + auto + '"]').show();
+		});	
 	</script>
 </body>
 </html>
